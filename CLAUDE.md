@@ -10,7 +10,7 @@
 - `docs/architecture/` — каталог сервисов, схемы, правила межсервисного взаимодействия. Перед работой над сервисом читать `README.md` и профильный документ.
 - `docs/adr/` — решения; `docs/journal/` — заметки автора.
 - Задачи: https://github.com/nervan-iwnl/Epoch/issues, вехи = milestones «0. Фундамент» … «10. Сервис: организации и масштаб».
-- Доска: https://github.com/users/nervan-iwnl/projects/4 (колонки Бэклог → На неделю → В работе → Готово).
+- Доска: https://github.com/users/nervan-iwnl/projects/4. Status: Бэклог → В работе → Готово («В работе» — взято на текущую неделю). Поля `Iteration` (недели чт–ср) и `Deadline` (только ближайшие две недели). Свои поля — латиницей: `gh` портит кириллицу в именах полей.
 
 ## Как помогать — важно
 
@@ -38,16 +38,21 @@
 
 - Ветка `N-коротко`, PR с `Closes #N`.
 - Размер в метках: `вечер`, `2–3 вечера`, `выходные`; `хардкор` — необязательно; `фронт (ИИ)` — пишет Claude.
-- Сдвинуть карточку на доске:
+- Статус, неделя и дедлайн на доске:
 
 ```bash
 GH="/c/Program Files/GitHub CLI/gh.exe"
 ITEM=$("$GH" project item-list 4 --owner nervan-iwnl --format json --limit 500 --jq '.items[] | select(.content.number==N) | .id')
 "$GH" project item-edit --project-id PVT_kwHOA268OM4Bjvcx --id "$ITEM" \
   --field-id PVTSSF_lAHOA268OM4Bjvcxzhiip94 --single-select-option-id <OPTION>
+"$GH" project item-edit --project-id PVT_kwHOA268OM4Bjvcx --id "$ITEM" \
+  --field-id PVTIF_lAHOA268OM4BjvcxzhinNOA --iteration-id <WEEK>
+"$GH" project item-edit --project-id PVT_kwHOA268OM4Bjvcx --id "$ITEM" \
+  --field-id PVTF_lAHOA268OM4BjvcxzhinNO8 --date YYYY-MM-DD
 ```
 
-`<OPTION>`: Бэклог `c66d839f`, На неделю `2348be14`, В работе `ad54807e`, Готово `bc98a9dd`.
+`<OPTION>`: Бэклог `c66d839f`, В работе `ad54807e`, Готово `bc98a9dd`.
+`<WEEK>`: Неделя 1 `d7490a77` (17.09), Неделя 2 `2164b05a` (24.09), Неделя 3 `068e4a1d` (01.10); новые недели и команды — в вики, страница «Доска».
 
 ## Окружение автора (на 2026-09-17)
 
