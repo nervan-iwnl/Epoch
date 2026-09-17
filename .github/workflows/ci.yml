@@ -28,4 +28,6 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - run: echo "Проверок пока нет — см. #12"
+      # Блочный скаляр: в обычной строке YAML « #12» стал бы комментарием.
+      - run: |
+          echo "Проверок пока нет — см. #12"
