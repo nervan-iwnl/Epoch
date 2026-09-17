@@ -1,0 +1,33 @@
+name: ci
+
+# ci-ok — обязательная проверка в ruleset на main. Без неё PR не мёржится.
+# Пока это заглушка. В #12 здесь появятся lint, тесты и сборка затронутых сервисов,
+# а ci-ok станет итоговой job, которая зависит от них через needs.
+#
+# Имя job не менять: ruleset ждёт проверку именно с таким именем.
+# paths-фильтр на весь workflow не ставить: PR без подходящих файлов
+# не получит ci-ok и повиснет в статусе «ожидает».
+# Пропущенная (skipped) job считается зелёной, поэтому итоговая ci-ok
+# должна запускаться с if: always() и сама проверять needs.*.result.
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci-ok:
+    name: ci-ok
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      # Блочный скаляр: в обычной строке YAML « #12» стал бы комментарием.
+      - run: |
+          echo "Проверок пока нет — см. #12"
