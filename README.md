@@ -15,7 +15,12 @@
 | Архитектурные решения | [docs/adr/](docs/adr/README.md) |
 | Журнал: что понял на каждой вехе | [docs/journal/](docs/journal/README.md) |
 | Доска задач | [GitHub Project](https://github.com/users/nervan-iwnl/projects/4) |
+| План недели, окружение, шпаргалки | [Вики](https://github.com/nervan-iwnl/Epoch/wiki) |
 
 ## Статус
 
+<<<<<<< Updated upstream
 Веха 0 — фундамент. Кода пока нет, задачи недели — в виде [«Текущая неделя»](https://github.com/users/nervan-iwnl/projects/4/views/1) на доске.
+=======
+Веха 0 — фундамент и вход. Кода пока нет. Первая фича — регистрация и вход по паролю в identity; задачи недели — в колонке «На неделю» на доске.
+>>>>>>> Stashed changes
