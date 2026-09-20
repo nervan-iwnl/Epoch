@@ -61,7 +61,7 @@ mindmap
 | **Сети** | Вехи 0, 3, 4, 8 | TLS, HTTP/2, WebSocket, TCP-прокси, SNI | «High Performance Browser Networking» (hpbn.co); Beej's Guide to Network Programming |
 | **Базы данных** | Вехи 2, 4, 5, 9, 10 | транзакции и изоляция, индексы и планировщик, партиционирование, WAL и репликация, PITR, RLS, колоночное хранение | Документация PostgreSQL; use-the-index-luke.com; «Database Internals» (Alex Petrov); курс CMU 15-445 |
 | **Распределённые системы** | Вехи 2, 4, 5, 10 | at-least-once и идемпотентность, лог событий, outbox, CQRS, durable execution, консенсус | «Designing Data-Intensive Applications» (Martin Kleppmann); MIT 6.5840; raft.github.io |
-| **Безопасность** | Вехи 1, 3, 6, 8 | песочницы, пароли и сессии, OAuth2, OWASP Top 10, каналы утечки, сетевая изоляция, атакующее мышление | OWASP Cheat Sheet Series; OWASP ASVS; «Security Engineering» (Ross Anderson) |
+| **Безопасность** | Вехи 0, 1, 3, 6, 8 | песочницы, пароли и сессии, OAuth2, OWASP Top 10, каналы утечки, сетевая изоляция, атакующее мышление | OWASP Cheat Sheet Series; OWASP ASVS; «Security Engineering» (Ross Anderson) |
 | **Инфраструктура** | Вехи 0, 5, 8 | образы и слои, Kubernetes изнутри, операторы, Terraform, GitOps, секреты | Kubernetes the Hard Way; book.kubebuilder.io |
 | **SRE и производительность** | Вехи 0, 2, 5, 6, 10 | трейсы и метрики, SLO и burn rate, нагрузочные тесты, flame graph, eBPF, хаос, постмортемы | «Site Reliability Engineering» и «The Site Reliability Workbook» (sre.google); «Systems Performance» (Brendan Gregg); «Release It!» (Michael Nygard) |
 | **Микросервисы и архитектура** | Все вехи, особенно 0, 2, 4, 10 | границы сервисов, база на сервис, sync против async, устойчивость вызовов, распределённые трейсы, монорепа, ADR, мультитенантность, ReBAC | «Building Microservices» (Sam Newman, 2-е издание); microservices.io; «Release It!» (Michael Nygard); статья о Zanzibar (2019) |
@@ -78,7 +78,7 @@ mindmap
 | Вехи 0–1 | The Rust Book и rustlings | Язык runner и воркера |
 | Вехи 2–4 | «Designing Data-Intensive Applications» целиком | Главная книга про данные и распределённые системы |
 | Вехи 2–4 | Документация PostgreSQL: Concurrency Control, Indexes, Using EXPLAIN, Partitioning | Понимать, что делает база |
-| Веха 3 | OWASP Cheat Sheets: Authentication, Password Storage, Session Management, CSRF, XSS | Своя авторизация без дыр |
+| Вехи 0 и 3 | OWASP Cheat Sheets: Authentication, Password Storage, Session Management (веха 0), CSRF, XSS (веха 3) | Своя авторизация без дыр |
 | Веха 5 | Kubernetes the Hard Way; «The Site Reliability Workbook» — главы про SLO и алерты | Кластер и эксплуатация |
 | Вехи 6 и 10 | «Systems Performance» (Brendan Gregg) | Бенчмарки и профилирование |
 | Веха 7 | Pro Git → Git Internals | Свой git-сервер |

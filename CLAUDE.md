@@ -9,8 +9,14 @@
 - `docs/learning-map.md` — какая веха что прокачивает и что читать.
 - `docs/architecture/` — каталог сервисов, схемы, правила межсервисного взаимодействия. Перед работой над сервисом читать `README.md` и профильный документ.
 - `docs/adr/` — решения; `docs/journal/` — заметки автора.
+<<<<<<< Updated upstream
 - Задачи: https://github.com/nervan-iwnl/Epoch/issues, вехи = milestones «0. Фундамент» … «10. Сервис: организации и масштаб».
 - Доска: https://github.com/users/nervan-iwnl/projects/4. Status: Бэклог → В работе → Готово («В работе» — взято на текущую неделю). Поля `Iteration` (недели чт–ср) и `Deadline` (только ближайшие две недели). Свои поля — латиницей: `gh` портит кириллицу в именах полей.
+=======
+- Задачи: https://github.com/nervan-iwnl/Epoch/issues, вехи = milestones «0. Фундамент и вход» … «10. Сервис: организации и масштаб».
+- Доска: https://github.com/users/nervan-iwnl/projects/4 (колонки Бэклог → На неделю → В работе → Готово).
+- Вики: https://github.com/nervan-iwnl/Epoch/wiki — план текущей недели, вехи и фичи, окружение, шпаргалка. Репозиторий вики — `Epoch.wiki.git`; план недели обновлять там же.
+>>>>>>> Stashed changes
 
 ## Как помогать — важно
 
@@ -36,6 +42,8 @@
 
 ## Работа с задачами
 
+- Иерархия: веха → фича (issue с меткой `фича`, заголовок `N.M · название`) → задачи как sub-issues фичи → шаги-чеклист в задаче. Новая задача всегда цепляется к фиче своей вехи.
+- Тело задачи: контекст, **Шаги** (чеклист), **Готово, когда**, **Разберёшься в**, **Читать**, **Зависит от**. Шаги — что сделать, а не готовый код.
 - Ветка `N-коротко`, PR с `Closes #N`.
 - Размер в метках: `вечер`, `2–3 вечера`, `выходные`; `хардкор` — необязательно; `фронт (ИИ)` — пишет Claude.
 - Статус, неделя и дедлайн на доске:
@@ -61,4 +69,5 @@ ITEM=$("$GH" project item-list 4 --owner nervan-iwnl --format json --limit 500 -
 - `gh` лежит в `C:\Program Files\GitHub CLI\gh.exe` и может отсутствовать в PATH. Вход — `nervan-iwnl`, есть scope `project`.
 - Системный Go 1.23 (`D:\Go`) слишком старый. Toolchain go1.27.1 скачан на D:. Для Go-команд выставлять: `GOPATH=D:\programming\.go`, `GOMODCACHE=D:\programming\.go\pkg\mod`, `GOCACHE=D:\programming\.go\cache`, `GOTMPDIR=D:\programming\.go\tmp`, `GOTOOLCHAIN=go1.27.1`.
 - buf, protoc-gen-go, golangci-lint не установлены: установка была прервана.
+- PostgreSQL 17.2 установлен в `D:\psql` (есть `postgres`, `psql`, `pg_ctl`) — до Docker identity разрабатывается на нём.
 - Rust, Node и Docker в Windows не установлены. WSL (Ubuntu) не запускается с ошибкой `E_UNEXPECTED` — Linux-часть (runner) пока проверяется только в CI.
